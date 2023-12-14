@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '2374255a59mshc5cd5bc26e33aedp1fe8afjsnfc671e58b302',
-      'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+      'X-RapidAPI-Key': '10bfb57844mshcd9aaaf4650bda5p1794b2jsn4724d2f11313',
+      'X-RapidAPI-Host': 'dark-sky.p.rapidapi.com'
     }
   };
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getWeatherMethod = (cityName) => {
     displayCity.innerHTML = cityName;
-    fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${cityName}`, options)
+    fetch(`https://dark-sky.p.rapidapi.com/v1/weather?city=${cityName}`, options)
       .then(response => response.json())
       .then((result) => {
         temp.innerHTML = result.temp;
